@@ -1,0 +1,1315 @@
+/* General Layout with Background */
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    margin: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 100vh;
+
+    /* Professional Medical Background */
+
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+
+                url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&q=80');
+
+    background-size: cover;
+
+    background-attachment: fixed;
+
+}
+
+
+
+/* Navbar */
+
+.navbar {
+
+    background: rgba(44, 62, 80, 0.95);
+
+    backdrop-filter: blur(10px);
+
+    padding: 15px 0;
+
+    color: white;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+}
+
+
+
+.nav-container {
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 20px;
+
+}
+
+
+
+.nav-links a {
+
+    color: white;
+
+    text-decoration: none;
+
+    margin-left: 20px;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+
+}
+
+
+
+.nav-links a:hover { color: #3498db; }
+
+
+
+/* The Main Content Card */
+
+.container {
+
+    background: rgba(255, 255, 255, 0.95);
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+
+    width: 90%;
+
+    max-width: 600px;
+
+    margin: 100px auto 40px; /* Space for navbar */
+
+    border: 1px solid rgba(255,255,255,0.3);
+
+}
+
+
+
+/* Form Elements */
+
+input, select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin: 10px 0 20px;
+
+    border: 2px solid #e0e0e0;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+
+}
+
+
+
+input:focus { border-color: #3498db; outline: none; }
+
+
+
+button {
+
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+
+    color: white;
+
+    border: none;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    width: 100%;
+
+    font-size: 16px;
+
+}
+
+
+
+/* SPECIAL: Diet Plan Background */
+
+.diet-page {
+
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+
+                url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?auto=format&fit=crop&w=1920&q=80') !important;
+
+    background-size: cover !important;
+
+}
+
+
+
+/* Table Styling */
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 20px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+}
+
+
+
+th { background: #3498db; color: white; padding: 15px; }
+
+td { padding: 12px; border-bottom: 1px solid #eee; }
+
+/* Center and size the logo for the login page */
+
+.login-logo {
+
+    width: 120px;          /* Sizes the logo nicely */
+
+    height: auto;
+
+    display: block;        /* Required for centering */
+
+    margin: 0 auto 15px;   /* Centers it and adds space below */
+
+    border-radius: 8px;    /* Optional: slightly rounds the corners */
+
+}
+
+
+
+/* Adjust the login card to fit the new logo */
+
+.login-card {
+
+    text-align: center;
+
+    padding: 40px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+}
+
+/* Styling for the logo in the top-left corner */
+
+.navbar-logo-img {
+
+    height: 35px;       /* Keeps the logo small enough for the top bar */
+
+    width: auto;        /* Maintains the logo's original shape */
+
+    vertical-align: middle;
+
+    display: inline-block;
+
+}
+
+
+
+.nav-logo {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+/* --- NAVIGATION LAYOUT: Logo Left, Bold Links Right --- */
+
+
+
+.nav-container {
+
+    display: flex;
+
+    justify-content: space-between; /* Pushes logo left and links right */
+
+    align-items: center;
+
+    width: 100%;
+
+    padding: 5px 30px;
+
+}
+
+
+
+/* The Rectangular Base for the Logo */
+
+.nav-logo-box {
+
+    background-color: #2c3e50; /* Dark rectangular base */
+
+    padding: 8px 12px;
+
+    border-radius: 4px;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+
+.navbar-logo-img {
+
+    height: 40px;
+
+    width: auto;
+
+}
+
+
+
+/* Right-side Bold Navigation Links */
+
+.nav-links {
+
+    display: flex;
+
+    gap: 25px;
+
+}
+
+
+
+.nav-links a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;        /* Makes the links BOLD as requested */
+
+    font-size: 1.1rem;
+
+    transition: color 0.3s;
+
+}
+
+
+
+.nav-links a:hover {
+
+    color: #2ecc71;           /* Optional: turns green on hover to match logo */
+
+}
+
+/* --- ENLARGED LEFT-SIDE LOGO --- */
+
+
+
+.nav-container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px 40px;            /* Increased padding for a bigger header */
+
+    background-color: #34495e;
+
+}
+
+
+
+.nav-logo-box {
+
+    background-color: #1a1a1a;      /* Your black rectangle base */
+
+    padding: 12px 25px;             /* More space inside the box */
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;                      /* Space between image and 'DP' text */
+
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+
+}
+
+
+
+.navbar-logo-img {
+
+    height: 65px;                   /* MUCH BIGGER SIZE as requested */
+
+    width: auto;
+
+    filter: drop-shadow(0px 0px 2px white); /* Makes it pop on black */
+
+}
+
+
+
+.logo-text {
+
+    color: white;
+
+    font-size: 2rem;                /* Large 'DP' text */
+
+    font-weight: 900;               /* Extra bold */
+
+    letter-spacing: 2px;
+
+}
+
+
+
+/* Bold Navigation Links */
+
+.nav-links a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 1.2rem;
+
+    margin-left: 25px;
+
+}
+
+/* --- SCREEN CORNER NAVIGATION --- */
+
+
+
+.navbar {
+
+    width: 100%;
+
+    background-color: #34495e;
+
+    padding: 0; /* Removes default padding to hit the corners */
+
+}
+
+
+
+.nav-container {
+
+    display: flex;
+
+    justify-content: space-between; /* Pushes content to absolute opposite ends */
+
+    align-items: center;
+
+    width: 100%;
+
+    max-width: 100%;               /* Ensures it uses the full screen width */
+
+    padding: 10px 0;               /* Top/Bottom padding only */
+
+}
+
+
+
+/* LEFT SIDE: Logo in the far corner */
+
+.nav-logo-box {
+
+    background-color: #1a1a1a;      /* Your black rectangle base */
+
+    padding: 10px 20px;
+
+    margin-left: 0;                /* Forces it to touch the left edge */
+
+    border-radius: 0 8px 8px 0;    /* Rounds only the inside corner */
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+
+.navbar-logo-img {
+
+    height: 55px;                  /* Keeps the logo nice and big */
+
+    width: auto;
+
+}
+
+
+
+/* RIGHT SIDE: Links in the far corner */
+
+.nav-links {
+
+    display: flex;
+
+    gap: 30px;
+
+    margin-right: 30px;            /* Gives a tiny bit of space from the very edge */
+
+}
+
+
+
+.nav-links a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 900;              /* Makes links extra BOLD */
+
+    font-size: 1.2rem;
+
+    transition: 0.3s;
+
+}
+
+/* --- FULL-WIDTH CORNER NAVIGATION --- */
+
+
+
+.navbar {
+
+    width: 100%;
+
+    background-color: #34495e; /* Header background color */
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+
+.nav-container {
+
+    display: flex;
+
+    justify-content: space-between; /* Pushes content to absolute opposite ends */
+
+    align-items: center;
+
+    width: 100%;
+
+    max-width: 100%;                /* Forces use of full screen width */
+
+}
+
+
+
+/* LEFT SIDE: Big Professional Logo Box in the Corner */
+
+.nav-logo-box {
+
+    background-color: #1a1a1a;       /* Black rectangular base from your drawing */
+
+    padding: 15px 30px;              /* Makes the box larger and more professional */
+
+    margin-left: 0;                 /* Pins it to the absolute left edge */
+
+    border-radius: 0 0 10% 0;      /* Optional: rounds only the bottom-right corner */
+
+    box-shadow: 4px 0 10px rgba(0,0,0,0.3);
+
+}
+
+
+
+.navbar-logo-img {
+
+    height: 70px;                   /* Larger size for a professional look */
+
+    width: auto;
+
+    display: block;
+
+}
+
+
+
+/* RIGHT SIDE: Bold Links in the Corner */
+
+.nav-links {
+
+    display: flex;
+
+    gap: 35px;                      /* Large spacing between links */
+
+    margin-right: 40px;             /* Space from the far-right edge */
+
+}
+
+
+
+.nav-links a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 900;               /* Maximum BOLD for clear visibility */
+
+    font-size: 1.25rem;             /* Slightly larger professional font */
+
+    text-transform: uppercase;      /* Clean, modern look */
+
+    transition: color 0.3s ease;
+
+}
+
+
+
+.nav-links a:hover {
+
+    color: #2ecc71;                 /* Green hover to match logo theme */
+
+}
+
+/* --- FULL-WIDTH CORNER NAVIGATION --- */
+
+.nav-container {
+
+    display: flex;
+
+    justify-content: space-between; /* Pushes items to far corners */
+
+    align-items: center;
+
+    width: 100%;
+
+    max-width: 100%;
+
+}
+
+
+
+/* LEFT SIDE: Big Professional Logo Box */
+
+.nav-logo-box {
+
+    background-color: #1a1a1a;       /* Black rectangular base */
+
+    padding: 15px 35px;              /* Makes it big and professional */
+
+    margin-left: 0;                  /* Pins to far-left corner */
+
+    border-radius: 0 0 12px 0;       /* Professional rounded edge */
+
+}
+
+
+
+.navbar-logo-img {
+
+    height: 75px;                    /* Large professional size */
+
+    width: auto;
+
+}
+
+
+
+/* RIGHT SIDE: Bold Links */
+
+.nav-links {
+
+    margin-right: 40px;              /* Pins to far-right corner */
+
+    display: flex;
+
+    gap: 30px;
+
+}
+
+
+
+.nav-links a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 900;                /* Extra BOLD */
+
+    font-size: 1.2rem;
+
+}
+
+/* --- ABOUT PAGE MEDICAL STYLING --- */
+
+.about-hero {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 400px;
+
+    overflow: hidden;
+
+}
+
+
+
+.hero-img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover; /* Professional crop */
+
+}
+
+
+
+.hero-text {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    color: white;
+
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+
+    text-align: center;
+
+}
+
+
+
+.about-container {
+
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    padding: 0 20px;
+
+}
+
+
+
+.medical-grid {
+
+    display: flex;
+
+    gap: 30px;
+
+    margin-top: 50px;
+
+    justify-content: center;
+
+}
+
+
+
+.grid-card {
+
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+
+    width: 350px;
+
+    text-align: center;
+
+    padding-bottom: 20px;
+
+}
+
+
+
+.grid-card img {
+
+    width: 100%;
+
+    height: 200px;
+
+    object-fit: cover;
+
+}
+
+
+
+.grid-card h3 {
+
+    margin: 15px 0 10px;
+
+    color: #34495e;
+
+}
+
+/* --- FULL SCREEN ABOUT PAGE STYLES --- */
+
+
+
+/* This overrides the standard container limits from base.html */
+
+.container {
+
+    max-width: 100% !important;
+
+    padding: 0 !important;
+
+    margin: 0 !important;
+
+}
+
+
+
+.about-full-screen {
+
+    width: 100vw;
+
+    margin: 0;
+
+    padding: 0;
+
+    overflow-x: hidden; /* Prevents horizontal scroll bars */
+
+}
+
+
+
+.hero-banner {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 80vh; /* Takes up 80% of the screen height */
+
+}
+
+
+
+.full-img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover; /* Professional full-screen crop */
+
+}
+
+
+
+.hero-overlay {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+
+    color: white;
+
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+}
+
+
+
+.medical-showcase {
+
+    display: flex;
+
+    width: 100%;
+
+    height: 50vh;
+
+}
+
+
+
+.showcase-item {
+
+    flex: 1; /* Each image takes exactly 50% width */
+
+    position: relative;
+
+}
+
+
+
+.showcase-item img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+
+.showcase-caption {
+
+    position: absolute;
+
+    bottom: 0;
+
+    width: 100%;
+
+    background: #1a1a1a; /* Matches your black logo box */
+
+    color: white;
+
+    padding: 20px;
+
+    text-align: center;
+
+}
+
+/* --- ENHANCED FULL-SCREEN ABOUT PAGE --- */
+
+
+
+.info-stripe {
+
+    background-color: #ffffff;
+
+    padding: 60px 10%; /* Creates a clean white space for text */
+
+    text-align: center;
+
+    width: 100vw;
+
+}
+
+
+
+.text-content h2 {
+
+    color: #34495e;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 20px;
+
+    font-weight: 900;
+
+}
+
+
+
+.text-content p {
+
+    color: #555;
+
+    font-size: 1.2rem;
+
+    line-height: 1.8;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+}
+
+
+
+.showcase-caption h3 {
+
+    color: #2ecc71; /* Matches the green in your logo theme */
+
+    font-size: 1.5rem;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+/* Ensures the black box style from your drawing is consistent */
+
+.showcase-caption {
+
+    position: absolute;
+
+    bottom: 0;
+
+    width: 100%;
+
+    background: rgba(26, 26, 26, 0.9); /* Deep black overlay */
+
+    color: white;
+
+    padding: 30px;
+
+    transition: 0.3s ease;
+
+}
+
+
+
+.showcase-item:hover .showcase-caption {
+
+    background: rgba(46, 204, 113, 0.9); /* Turns green on hover */
+
+}
+
+/* --- LOGIN PAGE STYLING --- */
+
+
+
+.login-page-wrapper {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 80vh; /* Centers vertically between navbar and footer */
+
+    width: 100%;
+
+}
+
+
+
+.login-card {
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Soft professional shadow */
+
+    width: 100%;
+
+    max-width: 450px; /* Keeps the card compact and centered */
+
+    text-align: center;
+
+}
+
+
+
+.login-card-logo img {
+
+    height: 50px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.login-card h2 {
+
+    font-size: 1.5rem;
+
+    font-weight: 900;
+
+    margin-bottom: 30px;
+
+    color: #1a1a1a;
+
+    letter-spacing: 1px;
+
+}
+
+
+
+.input-group {
+
+    text-align: left;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.input-group label {
+
+    display: block;
+
+    font-size: 0.8rem;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+
+    color: #555;
+
+}
+
+
+
+.input-group input {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    background-color: #f1f5f9;
+
+    font-size: 1rem;
+
+}
+
+
+
+.login-btn {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: linear-gradient(to right, #3498db, #2ecc71); /* Uses your existing colors */
+
+    color: white;
+
+    font-weight: bold;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+
+.login-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+
+}
+
+
+
+.register-link {
+
+    margin-top: 20px;
+
+    font-size: 0.9rem;
+
+    color: #777;
+
+}
+/* --- ABOUT PAGE STYLING --- */
+
+.about-full-screen {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hero Banner */
+.hero-banner {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.full-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 80%;
+}
+
+.hero-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Info Stripe */
+.info-stripe {
+    padding: 60px 15%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.info-stripe h2 {
+    color: #27ae60;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 60px 10%;
+    background-color: #f4f7f6;
+}
+
+.feature-card {
+    background: white;
+    padding: 40px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border-top: 4px solid #27ae60;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.feature-card .icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+/* Medical Showcase */
+.medical-showcase {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 5%;
+    background: #fff;
+}
+
+.showcase-item {
+    flex: 1;
+    min-width: 300px;
+    margin: 15px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.showcase-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.showcase-caption {
+    padding: 20px;
+    background: #2c3e50;
+    color: white;
+}
+
+.showcase-caption h3 {
+    color: #27ae60;
+    margin-bottom: 10px;
+}
+
+/* Mission Section */
+.mission-section {
+    padding: 80px 20%;
+    background-color: #27ae60;
+    color: white;
+    text-align: center;
+}
+
+.mission-section h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.mission-section p {
+    font-size: 1.2rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-overlay h1 { font-size: 2rem; }
+    .info-stripe { padding: 40px 5%; }
+    .mission-section { padding: 40px 10%; }
+}
