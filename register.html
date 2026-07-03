@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}Register - Disease Prediction{% endblock %}
+
+{% block content %}
+<div class="login-page-wrapper">
+    <div class="login-card" style="border: 3px solid #27ae60; border-radius: 12px; padding: 30px;">
+        <h2 style="text-align: center; color: #2c3e50;">REGISTER HERE</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 25px;">Enter your details to begin the assessment</p>
+
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <p style="color: #ff4d4d; font-size: 0.9rem; text-align: center;">{{ messages[0] }}</p>
+          {% endif %}
+        {% endwith %}
+        
+        <form action="{{ url_for('register') }}" method="POST" id="registerForm">
+            <div class="input-group" style="margin-bottom: 20px;">
+                <label for="username" style="display: block; font-weight: bold; margin-bottom: 5px;">FULL NAME / USERNAME</label>
+                <input type="text" id="username" name="username" placeholder="Enter full name" required 
+                       style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+
+            <div class="input-group" style="margin-bottom: 20px;">
+                <label for="age" style="display: block; font-weight: bold; margin-bottom: 5px;">AGE</label>
+                <input type="number" id="age" name="age" placeholder="Enter your age" required 
+                       style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+            
+            <div class="input-group" style="margin-bottom: 20px;">
+                <label for="password" style="display: block; font-weight: bold; margin-bottom: 5px;">ACCESS KEY (PASSWORD)</label>
+                <div style="position: relative; width: 100%;">
+                    <input type="password" id="password" name="password" placeholder="Create password" required 
+                           style="width: 100%; padding: 10px; padding-right: 40px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+                    <span id="togglePassword" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; font-size: 1.2rem; user-select: none;">
+                        👁️
+                    </span>
+                </div>
+            </div>
+
+            <div class="input-group" style="margin-bottom: 20px;">
+                <label for="confirm_password" style="display: block; font-weight: bold; margin-bottom: 5px;">CONFIRM ACCESS KEY</label>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Repeat password" required 
+                       style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+                <small id="matchMessage" style="display: block; margin-top: 5px; font-weight: bold;"></small>
+            </div>
+            
+            <button type="submit" class="login-btn" style="width: 100%; background-color: #27ae60; color: white; padding: 12px; border: none; border-radius: 6px; font-size: 1.1rem; cursor: pointer;">
+                CREATE ACCOUNT & START
+            </button>
+        </form>
+        
+        <p style="margin-top: 25px; font-size: 0.9rem; color: #888; text-align: center;">
+            Already a researcher? <a href="{{ url_for('login') }}" style="color: #3498db; text-decoration: none; font-weight: bold;">Login here</a>
+        </p>
+    </div>
+</div>
+
+<script>
+    // 1. Password Visibility Toggle
+    const togglePassword = document.querySelector('#togglePassword');
+    const passwordField = document.querySelector('#password');
+
+    togglePassword.addEventListener('click', function () {
+        const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordField.setAttribute('type', type);
+        this.textContent = type === 'password' ? '👁️' : '🙈';
+    });
+
+    // 2. Confirm Password Match Check
+    const form = document.getElementById('registerForm');
+    const pass = document.getElementById('password');
+    const conf = document.getElementById('confirm_password');
+    const msg = document.getElementById('matchMessage');
+
+    form.addEventListener('submit', function (e) {
+        if (pass.value !== conf.value) {
+            e.preventDefault(); // Stop form from sending
+            msg.style.color = '#e74c3c';
+            msg.textContent = '❌ Passwords do not match!';
+        }
+    });
+
+    // Optional: Real-time visual feedback
+    conf.addEventListener('input', function() {
+        if (conf.value === pass.value) {
+            msg.style.color = '#27ae60';
+            msg.textContent = '✅ Passwords match';
+        } else {
+            msg.style.color = '#e74c3c';
+            msg.textContent = '❌ Passwords do not match';
+        }
+    });
+</script>
+{% endblock %}
