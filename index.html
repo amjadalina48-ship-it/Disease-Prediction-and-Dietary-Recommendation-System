@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome - Disease Predictor & Dietary Recommendation System{% endblock %}
+
+{% block content %}
+    <div class="welcome-container" style="text-align: center; padding: 60px 20px; max-width: 900px; margin: 0 auto;">
+        <h1 style="color: #2c3e50; font-size: 2.5rem;">Welcome to the Disease Prediction System</h1>
+        <p style="font-size: 1.2rem; color: #7f8c8d; margin-bottom: 40px;">
+            Harnessing Machine Learning to bridge the gap between symptoms and recovery.
+        </p>
+        
+        <div style="margin-bottom: 50px;">
+            <a href="{{ url_for('login') }}" class="button-link" style="background-color: #27ae60; color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; display: inline-block; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Login to Analyze Symptoms</a>
+            <p style="margin-top: 20px;">
+                New here? <a href="{{ url_for('register') }}" style="color: #2980b9; font-weight: bold; text-decoration: none;">Create a secure account</a>
+            </p>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 40px 0;">
+
+        <h3 style="color: #2c3e50; margin-bottom: 25px;">Supported Symptom Analysis</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px;">
+            <div style="padding: 15px; border: 1px solid #e0e0e0; border-radius: 10px; background: #fdfdfd;">
+                <span style="font-size: 24px;">🌡️</span>
+                <p style="margin: 5px 0 0; font-weight: 500;">Fever</p>
+            </div>
+            <div style="padding: 15px; border: 1px solid #e0e0e0; border-radius: 10px; background: #fdfdfd;">
+                <span style="font-size: 24px;">😵‍💫</span>
+                <p style="margin: 5px 0 0; font-weight: 500;">Headache</p>
+            </div>
+            <div style="padding: 15px; border: 1px solid #e0e0e0; border-radius: 10px; background: #fdfdfd;">
+                <span style="font-size: 24px;">🤢</span>
+                <p style="margin: 5px 0 0; font-weight: 500;">Nausea</p>
+            </div>
+            <div style="padding: 15px; border: 1px solid #e0e0e0; border-radius: 10px; background: #fdfdfd;">
+                <span style="font-size: 24px;">💪</span>
+                <p style="margin: 5px 0 0; font-weight: 500;">Body Pain</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
