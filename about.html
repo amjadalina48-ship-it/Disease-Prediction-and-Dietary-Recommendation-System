@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="about-full-screen">
+    <div class="hero-banner">
+        <img src="{{ url_for('static', filename='images/healthcare.jpg') }}" alt="Medical Research" class="full-img">
+        <div class="hero-overlay">
+            <h1>Precision Medical Analytics</h1>
+            <p>Bridging the gap between diagnostic data and actionable health insights.</p>
+        </div>
+    </div>
+
+    <div class="info-stripe">
+        <div class="text-content">
+            <h2>About the Disease Prediction System</h2>
+            <p>
+                This project is a comprehensive health management tool designed to assist in the early identification of common ailments. 
+                By leveraging <strong>Machine Learning</strong>, the system processes patient symptoms—such as fever, fatigue, and body pain—to 
+                predict potential conditions ranging from the common cold to chronic issues like diabetes or hypertension.
+            </p>
+        </div>
+    </div>
+
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="icon">🔍</div>
+            <h3>Symptom Analysis</h3>
+            <p>Input-driven diagnostic modeling based on 8 key clinical symptoms for rapid health assessment.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🥗</div>
+            <h3>Clinical Nutrition</h3>
+            <p>Intelligent mapping of over 15 specific diseases to evidence-based weekly dietary protocols.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">📁</div>
+            <h3>Historical Logging</h3>
+            <p>Secure SQLite database integration to track patient progress and maintain long-term diagnostic history.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🛡️</div>
+            <h3>Data Integrity</h3>
+            <p>Built-in session management and encrypted data handling to ensure user privacy and research standards.</p>
+        </div>
+    </div>
+
+    <div class="medical-showcase">
+        <div class="showcase-item">
+            <img src="{{ url_for('static', filename='images/medical.jpg') }}" alt="ML Model Logic">
+            <div class="showcase-caption">
+                <h3>The ML Model</h3>
+                <p>Utilizing a pre-trained classification model to provide real-time results with high precision.</p>
+            </div>
+        </div>
+        <div class="showcase-item">
+            <img src="{{ url_for('static', filename='images/hospital.jpg') }}" alt="Infrastructure">
+            <div class="showcase-caption">
+                <h3>Infrastructure</h3>
+                <p>A scalable Flask-based architecture designed for low-latency performance in clinical environments.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mission-section">
+        <h2>Our Mission</h2>
+        <p>To provide a data-driven foundation for proactive health management, empowering users with instant information and personalized recovery plans.</p>
+    </div>
+</div>
+{% endblock %}
