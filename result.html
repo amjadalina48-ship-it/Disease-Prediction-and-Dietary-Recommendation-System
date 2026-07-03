@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}Results{% endblock %}
+
+{% block content %}
+    <div class="result-box" style="max-width: 850px; margin: 40px auto; padding: 20px;">
+        
+        <div style="background: rgba(255, 255, 255, 0.95); 
+                    padding: 40px; 
+                    border: 2px solid #2c3e50; 
+                    border-radius: 15px; 
+                    box-shadow: 0 15px 35px rgba(0,0,0,0.2);">
+
+            <h2 style="text-align: center; margin-top: 0; color: #000; font-weight: bold;">Prediction Analysis</h2>
+            
+            <div style="background-color: #e3f2fd; padding: 20px; border-radius: 8px; margin: 25px 0; border-left: 5px solid #2196F3;">
+                <p style="font-size: 1.3rem; margin-bottom: 10px;">
+                    <strong>Detected Disease:</strong> 
+                    <span style="color: #2c3e50; text-transform: uppercase;">{{ prediction }}</span>
+                </p>
+                <p style="line-height: 1.6; color: #34495e;">
+                    <strong>Suggested Solution:</strong> {{ solution }}
+                </p>
+            </div>
+
+            <h3 style="margin-bottom: 15px; color: #000;">Your Weekly Diet Plan</h3>
+            
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px; border: 1px solid #dee2e6; table-layout: fixed;">
+                    <thead>
+                        <tr style="background-color: #3498db; color: white;">
+                            <th style="border: 1px solid #dee2e6; padding: 12px; text-align: left; width: 30%;">Day</th>
+                            <th style="border: 1px solid #dee2e6; padding: 12px; text-align: left; width: 70%;">Dietary Recommendation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for day_plan in diet %}
+                        <tr style="background-color: white;">
+                            <td style="border: 1px solid #dee2e6; padding: 12px; color: #000; background-color: #f8f9fa;">
+                                <strong>{{ day_plan[0] }}</strong>
+                            </td>
+                            <td style="border: 1px solid #dee2e6; padding: 12px; color: #34495e; word-wrap: break-word; vertical-align: top;">
+                                {{ day_plan[1] }}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="margin-top: 30px; text-align: center; border-top: 1px solid #eee; padding-top: 20px;">
+                <a href="{{ url_for('predict') }}" class="nav-link" style="margin-right: 20px; text-decoration: none; color: #27ae60; font-weight: bold;">+ New Prediction</a>
+                <a href="{{ url_for('history') }}" class="nav-link" style="text-decoration: none; color: #3498db; font-weight: bold;">View My History</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
