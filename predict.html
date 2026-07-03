@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+
+
+{% block title %}Disease Prediction{% endblock %}
+
+
+
+{% block content %}
+
+    <div class="predict-container" style="max-width: 600px; margin: 40px auto; padding: 20px;">
+
+       
+
+        <div style="background: rgba(255, 255, 255, 0.95);
+
+                    padding: 40px;
+
+                    border: 2px solid #2c3e50; /* DARK SOLID BOUNDARY */
+
+                    border-radius: 15px;
+
+                    box-shadow: 0 15px 35px rgba(0,0,0,0.2);">
+
+
+
+            <h2 style="text-align: center; margin-top: 0; color: #000; font-weight: bold;">Symptom Assessment</h2>
+
+            <p style="text-align: center; color: #666; margin-bottom: 30px;">Please select your symptoms from the options below:</p>
+
+
+
+            <form action="{{ url_for('predict') }}" method="POST" class="symptom-form">
+
+               
+
+                {% set symptoms = [
+
+                    ('fever', 'Fever'),
+
+                    ('cough', 'Cough'),
+
+                    ('headache', 'Headache'),
+
+                    ('fatigue', 'Fatigue'),
+
+                    ('sore_throat', 'Sore Throat'),
+
+                    ('body_pain', 'Body Pain'),
+
+                    ('shortness_of_breath', 'Shortness of Breath'),
+
+                    ('nausea', 'Nausea')
+
+                   
+
+                ] %}
+
+
+
+                {% for id, label in symptoms %}
+
+                <div class="form-group" style="margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center;">
+
+                    <label for="{{ id }}" style="font-weight: bold; color: #000;">{{ label }}</label>
+
+                    <select name="{{ id }}" id="{{ id }}" required style="padding: 8px; border-radius: 6px; border: 1.5px solid #bdc3c7; width: 100px; background-color: white;">
+
+                        <option value="0">No</option>
+
+                        <option value="1">Yes</option>
+
+                    </select>
+
+                </div>
+
+                {% endfor %}
+
+
+
+                <button type="submit" style="width: 100%; background: linear-gradient(to right, #3498db, #2ecc71); color: white; padding: 14px; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold; cursor: pointer; margin-top: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+
+                    Predict Disease
+
+                </button>
+
+            </form>
+
+
+
+            <div style="margin-top: 30px; text-align: center; border-top: 1px solid #eee; padding-top: 20px;">
+
+                <a href="{{ url_for('history') }}" class="nav-link" style="margin-right: 15px; text-decoration: none; color: #3498db; font-weight: bold;">View My History</a>
+
+                <a href="{{ url_for('logout') }}" class="nav-link" style="color: #e74c3c; text-decoration: none; font-weight: bold;">Logout</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}
